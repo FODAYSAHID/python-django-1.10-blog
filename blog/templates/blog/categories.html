@@ -1,0 +1,29 @@
+{% extends "blog/home.html" %}
+
+{% block content %}
+	<h4 class='center-align'>Categories</h4>
+	<div class='row'>
+	{% for categories in query %}
+
+		<div class="col s12 m4">
+        	<div class="card">
+            	<div class="card-image">
+              		<img src="{{categories.category_image.url}}">
+              		<span class="card-title">{{categories.category_title}}</span>
+            	</div>
+            	<div class="card-content">
+              		<p>{{categories.category_description|safe|linebreaks}}</p>
+            	</div>
+            	<div class="card-action">
+              		<a href="{% url 'blog:category-content' slug=categories.slug %}" class='btn pink darken-4'>VIEW</a>
+            	</div>
+          	</div>
+        </div>
+            	
+		{% if forloop.counter|divisibleby:3 and not forloop.last %}
+		</div><div class='row'>
+		{% endif %}
+
+	{% endfor %}
+
+{% endblock %}

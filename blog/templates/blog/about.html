@@ -1,0 +1,69 @@
+{% extends "blog/blog.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+
+	<title>About | Foday S.N Kamara</title>
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col s12 m8">
+			<h4>ABOUT ME</h4>
+			<p class='flow-text'>
+				Every point in our lives is the result of all the steps taken before (planned and otherwise), as well as the countless influences of the people and places we encountered on our journey.
+			</p>
+			<p class='flow-text'>
+				Now a full-stack developer based in Freetown, Sierra Leone, I can look back and see those people, opportunities, and decisions that shaped my path.
+			</p>
+			<p class='flow-text'>
+				My Passion for developing software, web and mobile applications grows more intense day by day.I love to code.
+			</p>
+			<p class='flow-text'>
+				I am currently available for freelance work.If you have a project you would like to discuss, <a href="{% url 'blog:contact-me' %}">let's talk about it.</a>
+			</p>
+		</div>
+		<div class="col s12 m4">
+			<p class='center-align'>
+				<img src="{% static 'images/my_pic.JPG' %}" class='circle responsive-img' width="200">
+			</p>
+			<div class='center-align'>
+				<div class="chip pink darken-4 white-text">
+					HTML
+				</div>
+				<div class="chip teal lighten-2 white-text">
+					CSS
+				</div>
+				<div class="chip purple daren-4 white-text">
+					PHP
+				</div>
+				<div class="chip red accent-4 white-text">
+					JAVASCRIPT
+				</div>
+				<div class="chip deep-purple white-text">
+					JAVA
+				</div>
+				<div class="chip cyan white-text">
+					PYTHON
+				</div>
+				<div class="chip lime white-text">
+					C++
+				</div>
+				<div class="chip yellow darken-2 white-text">
+					C#
+				</div>
+				<div class="chip brown white-text">
+					VISUAL BASIC
+				</div>
+				<div class="chip lime accent-4 white-text">
+					SQL
+				</div>
+			</div>	
+			
+		</div>
+	</div>
+
+{% endblock %}
